@@ -1,0 +1,9 @@
+<div style="display: flex; flex-direction: column; align-items: center">
+  <button (click)="login()" style="padding: 3rem">
+    <h1>Login mit</h1>
+    <img [src]="'assets/Logo.png'" />
+  </button>
+</div>
+<div *ngIf="authInfo$ | async; let authInfo">
+  <pre> {{ authInfo | json }} </pre>
+</div>
